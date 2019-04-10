@@ -1,0 +1,9 @@
+.colors-example {
+	width: 100%;
+	display: flex;
+}
+
+.colors-example > div {
+	width: 10%;
+	height: 5vw;
+}
