@@ -21,10 +21,12 @@ export default class ColorPalettes {
 	}
 
 	newColorsData(newColors, colorsId) {
+		const oldColorsData = this.state.colorsData;
+
 		const newColorsData = [
-			...this.state.colorsData.slice(0, colorsId),
+			...oldColorsData.slice(0, +colorsId),
 			newColors,
-			...this.state.colorsData.slice(colorsId + 1)
+			...oldColorsData.slice(+colorsId + 1)
 		];
 
 		this.setState({
