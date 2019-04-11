@@ -1,4 +1,4 @@
-const ColorPalettesHead = (colorsData, closeColorPalettes) => {
+const ColorPalettesHead = (closeHandleClick) => {
 	const colorPalettesHead = document.createElement('div');
 	const img = document.createElement('img');
 	const p = document.createElement('p');
@@ -15,7 +15,7 @@ const ColorPalettesHead = (colorsData, closeColorPalettes) => {
 	colorPalettesHead.appendChild(p);
 	colorPalettesHead.appendChild(close);
 
-	close.addEventListener('click', () => closeColorPalettes(colorsData));
+	close.addEventListener('click', closeHandleClick);
 
 	return colorPalettesHead;
 };

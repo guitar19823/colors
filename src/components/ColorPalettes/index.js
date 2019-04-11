@@ -46,6 +46,14 @@ export default class ColorPalettes {
 		});
 	}
 
+	closeHandleClick() {
+		this.colorPalettes.classList.add('remove');
+
+		setTimeout(() => {
+			this.closeColorPalettes(this.state.colorsData);
+		}, 200);
+	}
+
 	colorsChange(activeColors) {
 		this.setState({
 			openLibraries: this.state.openLibraries,
@@ -71,8 +79,7 @@ export default class ColorPalettes {
 		this.colorPalettes.className = 'color-palettes';
 
 		this.colorPalettes.appendChild(ColorPalettesHead(
-			colorsData,
-			this.closeColorPalettes
+			this.closeHandleClick.bind(this)
 		));
 		this.colorPalettes.appendChild(new ColorPaletteNav(
 			openLibraries,

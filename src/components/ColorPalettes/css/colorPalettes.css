@@ -42,15 +42,28 @@
 	font-family: sans-serif;
 	font-size: 12px;
 	color: #333;
-	animation: animate .2s ease both;
+	animation: open .2s ease both;
 }
 
-@keyframes animate {
+@keyframes open {
 	0% {
 		transform: translate(-50%, -50%) scale(0);
 	}
 	100% {
 		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+.remove {
+	animation: close .2s ease both;
+}
+
+@keyframes close {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
 	}
 }
 
